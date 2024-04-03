@@ -1,5 +1,3 @@
-# PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES AY 23-24
-
 <h1> <align=center> PARALLEL REDUCTION USING UNROLLING TECHNIQUES </h3>
   Refer to the kernel reduceUnrolling8 and implement the kernel reduceUnrolling16, in which each thread handles 16 data blocks. Compare kernel performance with reduceUnrolling8 and use the proper metrics and events with nvprof to explain any difference in performance.</h3>
 
@@ -258,8 +256,12 @@ __global__ void reduceUnrolling8(int *g_idata, int *g_odata, unsigned int n)
 ```
 
 ## OUTPUT:
-![image](https://github.com/ShamRathan/PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES-AY-23-24/assets/93587823/ce124748-3bc8-4ea6-9985-5ce4189e5652)
+### Unrolling8:
+![image](https://github.com/ShamRathan/PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES-AY-23-24/assets/93587823/4af81831-7996-42db-813e-e967cd05fd30)
+### Unrolling16:
+![image](https://github.com/ShamRathan/PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES-AY-23-24/assets/93587823/1dd41f6e-b34e-4be7-9ca7-d15b5c7af985)
+
 
 
 ## RESULT:
-Thus the program has been executed by unrolling by 8 and unrolling by 16. It is observed that _________ has executed with less elapsed time than _____________ with blocks_____,______.
+Thus the program has been executed by unrolling by 8 and unrolling by 16. It is observed that Unrolling16  has executed with less elapsed time than  with Unrolling8 blocks 1048576,1048576
